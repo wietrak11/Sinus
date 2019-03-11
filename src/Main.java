@@ -11,6 +11,7 @@ public class Main {
 
         System.out.println("Wynik Math.sin() = " + Math.sin(Math.toRadians(x)));
         System.out.println("Wynik własnej implementacji = " + obliczSin(x,dlugoscSzeregu));
+        System.out.println("Klaudia");
 
     }
 
@@ -44,4 +45,6 @@ public class Main {
         else
             return x * silnia(x - 1);
     }
+
+
 }
