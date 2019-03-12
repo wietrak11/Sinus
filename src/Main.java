@@ -4,18 +4,26 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj kąt w stopniach");
+
+        System.out.println("Wybierz czy chcesz podać kąd w:");
+        System.out.println("1.Stopniach");
+        System.out.println("2.Radianach");
+        int wybor = scanner.nextInt();
+        System.out.println("Podaj wartosc");
         double x = scanner.nextDouble();
         System.out.println("Podaj liczbe elementow szeregu");
         int dlugoscSzeregu = scanner.nextInt();
 
-        System.out.println("Wynik Math.sin() = " + Math.sin(Math.toRadians(x)));
-        System.out.println("Wynik własnej implementacji = " + obliczSin(x,dlugoscSzeregu));
-
+        if(wybor==1){
+            System.out.println("Wynik Math.sin() = " + Math.sin(Math.toRadians(x)));
+            System.out.println("Wynik własnej implementacji = " + obliczSin(Math.toRadians(x),dlugoscSzeregu));
+        }else if(wybor==2){
+            System.out.println("Wynik Math.sin() = " + Math.sin(x));
+            System.out.println("Wynik własnej implementacji = " + obliczSin(x,dlugoscSzeregu));
+        }
     }
 
     public static double obliczSin(double x, int dlugoscSzeregu){
-        x = Math.toRadians(x);
         double wynik = 0;
 
         for(int i=0 ; i<dlugoscSzeregu ; i++){
