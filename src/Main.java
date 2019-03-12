@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Wybierz czy chcesz podać kąd w:");
+        System.out.println("Wybierz czy chcesz podać kąt w:");
         System.out.println("1.Stopniach");
         System.out.println("2.Radianach");
         int wybor = scanner.nextInt();
